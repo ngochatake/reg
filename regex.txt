@@ -1,0 +1,51 @@
+Pattern: ((great )*grand)?((fa|mo)ther)
+Addition: \$1 = `$1`\n\$2 = `$2`\n\$3 = `$3`\n\$4 = `$4` to find and replace the target string
+Target:
+	father
+	mother
+	grandfather
+	grandmother
+	great grandmother
+	great grandfather
+	great great grandmother
+	great great grandfather
+
+Example:
+
+I. Target: great great grandfather
+
+$1 = `great great grand`
+$2 = `great `
+$3 = `father`
+$4 = `fa`
+
+II. Target: grandfather
+
+$1 = `grand`
+$2 = ``
+$3 = `father`
+$4 = `fa`
+
+III. Target: great grandmother
+
+$1 = `great grand`
+$2 = `great `
+$3 = `mother`
+$4 = `mo`
+
+The plus, the star and the repetition using curly braces are greedy.
+https://www.regular-expressions.info/repeat.html
+
+<EM>test<italic>testing</italic></EM>
+
+assignment
+1. find a string belongs to whole string and keep that string, remove the others.
+https://stackoverflow.com/questions/406230/regular-expression-to-match-a-line-that-doesnt-contain-a-word
+^((?!hede).)*$
+
+
+2. match the login as the last word separated by dot and the second last separated by dot
+
+com.hatake.commonservices.services.base.authentication.transaction.authenticationtransactiontypes.login
+
+A: [^.]+$
