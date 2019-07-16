@@ -1,0 +1,24 @@
+1. Pilot
+$[ENAM]: E or N..; match from left to right
+value: My name is $NAME$
+
+https?://[^\s]+
+value: https://google.com test here.
+
+?: non-capturing group
+
+2. alternation
+/g: global
+/i: ignore case
+(?:): non-capturing group
+
+bokeh
+pandas
+
+1. install: pip install pandas
+   you could use the pre compile libraries in python
+
+2. ipython vs jupiter notebook
+	  import pandas
+	  df1 = pandas.DataFrame([[],[]])
+	  df2 = pandas.DataFrame([{},{}])
